@@ -5,7 +5,7 @@ import api from "~/services/api";
 import { Container } from "./styles";
 
 export default function AvatarInput() {
-  const { defaultValue, registerField } = useField("avata");
+  const { defaultValue, registerField } = useField("avatar");
 
   const [file, setFile] = useState(defaultValue && defaultValue.id);
   const [preview, setPreview] = useState(defaultValue && defaultValue.url);
@@ -37,9 +37,7 @@ export default function AvatarInput() {
     <Container>
       <label htmlFor="avatar">
         <img
-          src={
-            preview || "https://api.adorable.io/avatars/50/abott@adorable.png"
-          }
+          src="https://api.adorable.io/avatars/50/abott@adorable.png"
           alt=""
         />
         <input
